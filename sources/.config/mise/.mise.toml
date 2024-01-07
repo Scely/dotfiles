@@ -1,0 +1,12 @@
+[tools]
+python = "3.12"
+node = "20"
+go = "1.21"
+terraform = "latest"
+gcloud = "latest"
+kubectl = "latest"
+helm = "latest"
+
+[tasks.lint]
+description = 'Lint with superlinter'
+run = "docker run -e RUN_LOCAL=true -v $(pwd):/tmp/lint github/super-linter"
